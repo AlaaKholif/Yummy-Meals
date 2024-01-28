@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yummy</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.min.css" />
+  </head>
+
+  <body>
+
+    <!-- Start Sidebar Section -->
+    <aside class="position-fixed top-0 bottom-0 d-flex z-2 side-nav">
+      <div class="sidebar-menu-section p-4 d-flex flex-column justify-content-between pe-0">
+        <ul class="sidebar-menu-list list-unstyled">
+          <li class="search"><a href="#">Search</a></li>
+          <li class="categories"><a href="#">Categories</a></li>
+          <li class="area"><a href="#">Area</a></li>
+          <li class="ingredients"><a href="#">Ingredients</a></li>
+          <li class="contact"><a href="#">Contact Us</a></li>
+        </ul>
+
+        <div class="sidebar-social">
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fa-solid fa-globe pb-1"></i></a>
+          </div>
+          <p>Copyright Â© 2019 All Rights Reserved.</p>
+        </div>
+      </div>
+
+      <div class="sidebar-section bg-white h-100 px-2 py-4">
+        <div class="sidebar-content d-flex flex-column justify-content-between align-items-center h-100">
+          <div class="logo">
+            <img src="./images/logo.png" alt="Logo" class="w-100" />
+          </div>
+          <div class="sidebar-menu-icons">
+            <i class="fa-solid fa-bars"></i>
+            <i class="fa-regular fa-xmark d-none"></i>
+          </div>
+          <div class="sidebar-links d-flex flex-column">
+            <i class="fa-solid fa-globe pb-1"></i>
+            <i class="fa-solid fa-share-nodes"></i>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Loader -->
+    <div class="loading d-flex justify-content-center align-items-center vh-100 position-absolute top-0 w-100 start-0 bg-black z-3 d-none">
+      <span class="loader"></span>
+    </div>
+
+    <!-- Start Header Section -->
+    <header>
+      <div class="container">
+        <div class="row gy-4" id="homeData"></div>
+      </div>
+    </header>
+
+    <!-- Start Main Section -->
+    <main>
+
+      <!-- Start Details Section -->
+      <section id="details" class="d-none">
+        <div class="container">
+          <div class="row" id="detailsData">
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Search Section -->
+      <section id="search" class="d-none">
+        <div class="container w-75">
+          <div class="row py-4">
+            <div class="col-md-6">
+              <input type="text" class="form-control text-white bg-transparent" id="searchName" placeholder="Search By Name">
+            </div>
+            <div class="col-md-6">
+              <input type="text" class="form-control text-white bg-transparent" id="searchLetter" placeholder="Search By First Letter">
+            </div>
+          </div>
+          <div class="row gy-4" id="searchData"></div>
+        </div>
+      </section>
+
+      <!-- Start Categories List Section -->
+      <section id="categories" class="d-none">
+        <div class="container">
+          <div class="row gy-4" id="categoriesData">
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Category Meals Section -->
+      <section id="category-meals" class="d-none">
+        <div class="container">
+          <div class="row gy-4" id="categoryMealsData"></div>
+        </div>
+      </section>
+
+      <!-- Start Area List Section -->
+      <section id="area" class="d-none">
+        <div class="container">
+          <div class="row gy-4" id="areaData">
+          </div>
+        </div>
+      </section>
+
+      <!-- Start Area Meals Section -->
+      <section id="area-meals" class="d-none">
+        <div class="container">
+          <div class="row gy-4" id="areaMealsData"></div>
+        </div>
+      </section>
+
+      <!-- Start Ingredients Section -->
+      <section id="ingredients" class="d-none">
+        <div class="container">
+          <div class="row gy-4" id="ingredientsData"></div>
+        </div>
+      </section>
+
+      <!-- Start Ingredients Meals Section -->
+      <section id="ingredients-meals" class="d-none">
+        <div class="container">
+          <div class="row gy-4" id="ingredientsMealsData"></div>
+        </div>
+      </section>
+
+      <!-- Start Contact Us Section -->
+      <section id="contact" class="d-none">
+        <div class="container w-75 d-flex align-items-center min-vh-100">
+          <div class="row gy-4">
+            <div class="col-md-6">
+              <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
+              <div id="nameError" class="error-message d-none rounded"></div>
+            </div>
+            <div class="col-md-6">
+              <input type="email" class="form-control" id="email" placeholder="Enter Your Email">
+              <div id="emailError" class="error-message d-none rounded"></div>
+            </div>
+            <div class="col-md-6">
+              <input type="tel" class="form-control" id="number" placeholder="Enter Your Phone">
+              <div id="numberError" class="error-message d-none rounded"></div>
+            </div>
+            <div class="col-md-6">
+              <input type="number" class="form-control" id="age" placeholder="Enter Your Age">
+              <div id="ageError" class="error-message d-none rounded"></div>
+            </div>
+            <div class="col-md-6">
+              <input type="password" class="form-control" id="password" placeholder="Enter Your Password">
+              <div id="passwordError" class="error-message d-none rounded"></div>
+            </div>
+            <div class="col-md-6">
+              <input type="password" class="form-control" id="repassword" placeholder="Repassword">
+              <div id="repasswordError" class="error-message d-none rounded"></div>
+            </div>
+            <div class="col-12">
+              <div class="button text-center">
+                <button id="submitBtn" disabled="" class="btn btn-outline-danger px-2">Submit</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Scripts -->
+
+    <!-- Bootstrap -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- jQuery -->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+
+    <!-- Custom Script -->
+    <script type="module" src="./js/index.js"></script>
+
+  </body>
+
+</html>
